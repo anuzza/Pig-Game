@@ -1,6 +1,10 @@
 'use strict';
 
 //selecting elements
+const player0El = document.querySelector('.player--0');
+
+const player1El = document.querySelector('.player--1');
+
 const score0El = document.querySelector('#score--0');
 // # is for id and . is for classes
 
@@ -50,5 +54,8 @@ btnRoll.addEventListener('click', function () {
 
     activePlayer = activePlayer === 0 ? 1 : 0;
     currentScore = 0;
+
+    player0El.classList.toggle('player--active');
+    player1El.classList.toggle('player--active');
   }
 });
